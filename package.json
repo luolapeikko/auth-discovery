@@ -3,31 +3,28 @@
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "biome check",
+    "validate": "tsc --noEmit"
   },
   "keywords": [],
   "author": "",
   "license": "LGPL-2.1",
-  "packageManager": "pnpm@9.10.0+sha512.73a29afa36a0d092ece5271de5177ecbf8318d454ecd701343131b8ebc0c1a91c487da46ab77c8e596d6acf1461e3594ced4becedf8921b074fbd8653ed7051c",
   "devDependencies": {
-    "@stylistic/eslint-plugin": "^2.8.0",
-    "@tsconfig/node18": "^18.2.4",
-    "@types/node": "^22.5.4",
-    "@typescript-eslint/eslint-plugin": "^8.5.0",
-    "@typescript-eslint/parser": "^8.5.0",
-    "eslint": "8",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-config-standard": "^17.1.0",
-    "eslint-plugin-deprecation": "^3.0.0",
-    "eslint-plugin-prettier": "^5.2.1",
-    "eslint-plugin-sonarjs": "0.23",
-    "prettier": "^3.3.3",
-    "tsup": "^8.2.4",
-    "typescript": "^5.6.2",
-    "zod": "^3.23.8"
+    "@biomejs/biome": "^2.5.15",
+    "@tsconfig/node24": "^24.0.5",
+    "@types/node": "^24.19.2",
+    "@vitest/coverage-v8": "^5.0.3",
+    "c8": "^12.0.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4",
+    "vitest": "^5.0.3",
+    "zod": "^4.6.5"
   },
   "peerDependencies": {
-    "zod": "^3"
-  }
+    "zod": "^4"
+  },
+  "packageManager": "pnpm@12.11.2+sha512.25a51652a196785af5f28bda6dfe8dc582ebefa4ac1d180221ce1390231c5fb76637822ea4b6e4633ce74acdcb0a77f725af11bad38177fdeddaee818a955cb9"
 }
