@@ -15,6 +15,7 @@ env:
   PACKAGE_NAME: "unknown"
   PACKAGE_VERSION: "unknown"
   PACKAGE_MANAGER: "npm"
+  PACKAGE_PRIVATE: "false"
   NPM_VERSION: "unknown"
   HAVE_VALIDATE_SCRIPT: false
   HAVE_LINT_SCRIPT: false
@@ -66,6 +67,6 @@ jobs:
       - name: Publish ${{env.PACKAGE_NAME}} ${{env.PACKAGE_VERSION}}
         run: npm publish --no-git-checks --access public
         if: |
-          env.NPM_VERSION != 'unknown' &&
+          env.PACKAGE_PRIVATE != 'true' &&
           github.ref == env.PUBLISH_BRANCH &&
           env.PACKAGE_VERSION != env.NPM_VERSION
